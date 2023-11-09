@@ -6,9 +6,9 @@ public class Task4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        double x = Double.parseDouble(scanner.nextLine());
-        double y = Double.parseDouble(scanner.nextLine());
-        double z = Double.parseDouble(scanner.nextLine());
+        double x = scanner.nextDouble();
+        double y = scanner.nextDouble();
+        double z = scanner.nextDouble();
 
         double avg = (x + y + z) / 3;
 
