@@ -1,7 +1,8 @@
 public class Task16 {
     public static void main(String[] args) {
 
-        equation("8-x=2");
+        equation("8+x=9");
+        equation("x-8=1");
 
     }
 
