@@ -32,11 +32,10 @@ public class Task18 {
             } else if (!answer.equals("Подсказка") && i!=2){
                 System.out.println("Подумай еще!");
                 i++;
-            } else if (i==2){
+            } else if (i>=2 && !answer.equals("Подсказка")){
                 System.out.println("Обидно, приходи в другой раз");
                 break;
             }
-
 
         }
 
