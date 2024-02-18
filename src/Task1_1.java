@@ -9,7 +9,7 @@ public class Task1_1 {
      */
     public static void main(String[] args) {
 
-        System.out.printf("Результат вычесления %.4f", calc());
+        System.out.printf("Результат вычисления %.4f", calc());
 
     }
 
