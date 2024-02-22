@@ -43,6 +43,10 @@ public class MixMaxElem {
         arr[indNegative]=minPositive;
         arr[indPositive]=maxNegative;
 
+        for (int j = 0; j < arr.length-1; j++) {
+            System.out.println(arr[j]);
+        }
+
     }
 
 }
