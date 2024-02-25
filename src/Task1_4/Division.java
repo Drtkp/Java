@@ -4,7 +4,15 @@ public class Division implements Calculate{
 
     @Override
     public Number calc(Number firstNum ,Number secNum) {
-        return trans(firstNum,secNum);
+        Number result = null;
+        try {
+            result = trans(firstNum,secNum);
+        } catch (ArithmeticException exception){
+            System.out.println("Операция невозможна");
+        } finally {
+            return result;
+        }
+        
     }
 
     private Number trans (Number firstNum ,Number secNum) {
