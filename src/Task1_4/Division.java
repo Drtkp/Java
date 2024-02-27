@@ -1,21 +1,13 @@
 package Task1_4;
 
-public class Division implements Calculate{
+public class Division implements Calculate {
 
     @Override
-    public Number calc(Number firstNum ,Number secNum) {
-        Number result = null;
-        try {
-            result = trans(firstNum,secNum);
-        } catch (ArithmeticException exception){
-            System.out.println("Операция невозможна");
-        } finally {
-            return result;
-        }
-        
+    public Number calc(Number firstNum, Number secNum) {
+        return trans(firstNum, secNum);
     }
 
-    private Number trans (Number firstNum ,Number secNum) {
+    private Number trans(Number firstNum, Number secNum) {
         if (firstNum instanceof Double || secNum instanceof Double) {
             return firstNum.doubleValue() / secNum.doubleValue();
         } else if (firstNum instanceof Float || secNum instanceof Float) {

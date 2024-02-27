@@ -1,14 +1,50 @@
 package Task1_4;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
         Calculator calculator = new Calculator();
 
-        System.out.println("Частное: " + calculator.calcDivision(1000,10));
-        System.out.println("Разность: " + calculator.calcDifference(100,99));
-        System.out.println("Произведение: " + calculator.calcMultiplication(10,200));
-        System.out.println("Сумма: " + calculator.calcAdditional(1,2));
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+
+            System.out.println("Укажите операцию");
+            String operation = scanner.nextLine();
+
+            System.out.println("Введите первое число");
+            int firstNum = Integer.parseInt(scanner.nextLine());
+
+            System.out.println("Введите второе число");
+            int secNum = Integer.parseInt(scanner.nextLine());
+
+            System.out.println("Выполняем вычисления");
+
+            switch (operation) {
+                case "+":
+                    System.out.println("Результат: " + calculator.calcAdditional(firstNum, secNum));
+                    break;
+                case "-":
+                    System.out.println("Результат: " + calculator.calcDifference(firstNum, secNum));
+                    break;
+                case "/":
+                    System.out.println("Результат: " + calculator.calcDivision(firstNum, secNum));
+                    break;
+                case "*":
+                    System.out.println("Результат: " + calculator.calcMultiplication(firstNum, secNum));
+                    break;
+                default:
+                    System.out.println("Операция отсутствует");
+
+            }
+
+        } catch (ArithmeticException e) {
+            System.out.println("Ошибка вычисления");
+        } catch (NumberFormatException e) {
+            System.out.println("Некорректный ввод данных");
+        }
 
     }
 }
