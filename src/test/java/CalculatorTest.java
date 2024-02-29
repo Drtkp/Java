@@ -1,4 +1,5 @@
 import Task1_4.Calculator;
+import Task1_4.Logic;
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
 
@@ -54,5 +55,14 @@ public class CalculatorTest {
                 "Неверный результат вычисления.Ожидаемый результат -2");
 
     }
+
+
+    @Test
+    public void calculatorErrorTest(){
+
+        Assert.assertEquals(Logic.logic(6,0,"/"),"Ошибка вычисления");
+
+    }
+
 
 }
